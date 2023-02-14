@@ -31,7 +31,7 @@ data_charge_states_summary <- data_charge_states %>%
   group_by(peptide_modified_sequence, modified_sequence_full_names) %>%
   summarise(mean = mean(frac_abud_charge_states), 
             sd = sd(frac_abud_charge_states), 
-            rsd = (sd(frac_abud_charge_states)/mean(frac_abud_charge_states)))
+            rsd = (sd(frac_abud_charge_states)/mean(frac_abud_charge_states)*100))
 
 
 #Plot data-----------------------------------------------------------------------
